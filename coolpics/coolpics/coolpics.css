@@ -35,6 +35,31 @@ main {
     margin: 20px;
     text-align: center;
 }
+.hide {
+    display: none;
+}
+
+dialog.image-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0;
+  border: none;
+  z-index: 10;
+}
+
+dialog img {
+  display: block;
+  margin: 20vh auto;
+  width: 90%;
+  max-height: 100%;
+}
+
+button.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 5%;
+}
 
 .gallery {
     display: grid;
@@ -56,6 +81,7 @@ footer {
     background-color: rgb(68, 43, 158);
     padding: 20px;
     color: white;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
