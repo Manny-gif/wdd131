@@ -1,0 +1,93 @@
+/* Base styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #473144;
+  margin: 0;
+  padding: 0;
+}
+
+/* Accessibility */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #AF1B3F;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skiptocontent a:focus {
+  top: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+nav {
+  border-top: 1px solid #EFC69B;
+  border-bottom: 1px solid #EFC69B;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  justify-content: end;
+  justify-items: end;
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #AF1B3F;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Main layout */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+/* Article layout */
+article {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+}
+
+.article-meta time {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Filter box */
+.filters {
+  border-left: 1px solid #ccc;
+  padding-left: 1rem;
+}
