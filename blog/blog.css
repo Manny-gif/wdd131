@@ -62,15 +62,21 @@ nav ul li a {
 
 /* Main layout */
 main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  gap: 2rem;
+  /* border-left: 1px solid #ccc; */
+
 }
 
-.article-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
+.book {
+ padding-bottom: 40px;
+ border-bottom: 1px solid #ccc;
+ border-color: #EFC69B;
+ text-align: center;
 }
 
 /* Article layout */
@@ -86,8 +92,24 @@ article {
   margin-bottom: 0.5rem;
 }
 
+.article-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  border-right: 1px solid #EFC69B;
+  padding-right: 1rem;
+  font-size: 0.9rem; 
+  font-weight: bold;
+  margin-bottom: 0; 
+ 
+}
+
+
+
 /* Filter box */
 .filters {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid;
   padding-left: 1rem;
+  border-color:#EFC69B;;
+  text-align: left;
 }
