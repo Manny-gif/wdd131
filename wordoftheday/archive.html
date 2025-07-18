@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Word of the Day" />
+  <meta name="author" content="Manny Yasa" />
+  <title>Word of the Day</title>
+  <link rel="stylesheet" href="archive.css" />
+  <script src="word.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="logo">
+      <img src="images/logo1.jpeg" alt="Word of the Day Logo" class="logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content with background image -->
+  <main class="archive-section">
+    <div class="background-overlay">
+      <!-- Optional semi-transparent overlay if needed -->
+    </div>
+
+ <div class="archive-content">
+  <div class="search-bar">
+    <input type="text" placeholder="Find a word" />
+    <img src="images/search.svg"
+         alt="Search Icon"
+         class="search-icon"
+         width="20"
+         height="20" />
+  </div>
+
+  <button id="clear-history-btn" onclick="clearHistory()">Clear Search History</button>
+</div>
+
+      <section class="history-card-container">
+        <p>Your Search History</p>
+        <!-- JavaScript will inject word cards here -->
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Manny Yasa 2025 WDD131</p>
+    <div class="icons">
+      <a href="#"><img src="images/instagram.jpg" alt="Instagram icon" width="20" height="20" /></a>
+      <a href="#"><img src="images/twitter.png" alt="X icon" width="20" height="20" /></a>
+      <a href="#"><img src="images/facebook.png" alt="Facebook icon" width="20" height="20" /></a>
+    </div>
+  </footer>
+
+</body>
+</html>
