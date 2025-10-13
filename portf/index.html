@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emmanuel Yasa | Portfolio</title>
+  <link rel="stylesheet" href="port.css" />
+</head>
+<body>
+  <header>
+    <h1>Emmanuel Yasa</h1>
+    <p>Web Developer | Cloud Student</p>
+    <button id="themeToggle">Switch Theme</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+
+    <!-- 👇 Added photo section -->
+    <div class="photo">
+      <img src="me.png" alt="Photo of Emmanuel Yasa">
+    </div>
+
+    <p>
+      Hello! I’m Emmanuel, a student learning web development and cloud computing.
+      I enjoy building simple and useful websites using HTML, CSS, and JavaScript.
+      I’m also gaining skills in Firebase and Node.js for hosting and deployment.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>Firebase Hosting</li>
+      <li>Python & Node.js</li>
+      <li>Basic Cloud Computing</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Cool Pics Gallery</h3>
+      <p>A responsive photo gallery with a working image viewer made in JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Mindfulness App</h3>
+      <p>A small Python program for breathing and reflection exercises.</p>
+    </div>
+    <div class="project">
+      <h3>Personal Blog</h3>
+      <p>A simple web blog built using HTML, CSS, and JavaScript.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you’d like to get in touch, send me a message:</p>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Emmanuel Yasa | Built with HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
