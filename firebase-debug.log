@@ -1,0 +1,87 @@
+[debug] [2025-10-29T18:44:03.747Z] ----------------------------------------------------------------------
+[debug] [2025-10-29T18:44:03.752Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2025-10-29T18:44:03.752Z] CLI Version:   14.22.0
+[debug] [2025-10-29T18:44:03.753Z] Platform:      win32
+[debug] [2025-10-29T18:44:03.753Z] Node Version:  v22.19.0
+[debug] [2025-10-29T18:44:03.754Z] Time:          Wed Oct 29 2025 12:44:03 GMT-0600 (Mountain Daylight Time)
+[debug] [2025-10-29T18:44:03.754Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-29T18:44:04.278Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-29T18:44:04.282Z] > authorizing via signed-in user (yas23001@byui.edu)
+[debug] [2025-10-29T18:44:04.283Z] [iam] checking project port-28889158-e2929 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-10-29T18:44:04.286Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:04.287Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:04.291Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/port-28889158-e2929:testIamPermissions [none]
+[debug] [2025-10-29T18:44:04.293Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/port-28889158-e2929:testIamPermissions x-goog-quota-user=projects/port-28889158-e2929
+[debug] [2025-10-29T18:44:04.296Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/port-28889158-e2929:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-10-29T18:44:04.769Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/port-28889158-e2929:testIamPermissions 200
+[debug] [2025-10-29T18:44:04.770Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/port-28889158-e2929:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-10-29T18:44:04.772Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:04.773Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:04.774Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/port-28889158-e2929 [none]
+[debug] [2025-10-29T18:44:05.571Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/port-28889158-e2929 200
+[debug] [2025-10-29T18:44:05.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/port-28889158-e2929 {"projectId":"port-28889158-e2929","projectNumber":"985506470467","displayName":"Firebase app","name":"projects/port-28889158-e2929","resources":{"hostingSite":"port-28889158-e2929"},"state":"ACTIVE","etag":"1_c81d7bca-f08b-48c0-b5c5-dc0dc7775540"}
+[info] 
+[info] === Deploying to 'port-28889158-e2929'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-10-29T18:44:05.586Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:05.587Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:05.587Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions [none]
+[debug] [2025-10-29T18:44:05.588Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-10-29T18:44:06.351Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions 200
+[debug] [2025-10-29T18:44:06.351Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions {"name":"projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[port-28889158-e2929]: beginning deploy... 
+[info] i  hosting[port-28889158-e2929]: found 12 files in portf 
+[debug] [2025-10-29T18:44:06.388Z] [hosting] uploading with 200 concurrency
+[debug] [2025-10-29T18:44:06.400Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:06.401Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:06.404Z] [hosting] hash cache [cG9ydGY] stored for 12 files
+[debug] [2025-10-29T18:44:06.406Z] [hosting][hash queue][FINAL] {"max":7,"min":1,"avg":1,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":15}
+[debug] [2025-10-29T18:44:06.408Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c:populateFiles [none]
+[debug] [2025-10-29T18:44:06.410Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c:populateFiles {"files":{"/week5 (1).bat":"127832911e914690c7d3a303b167cf46ce1a209d24b4aa2b3fc1744de5cbf79a","/projects.html":"b715a99e311cdd8ccf569609a047f11b8b75d56d35dd3a80eb4ad4311cb9deb5","/port.js":"e2ed3c3b1bc79adcee7dd76fabce13552060bf4d64b4db0eecba62cbbf84bb45","/port.css":"860a5da7e5dd831a45ddd406266084c640b0d5643b26b342eede21f615676976","/me.png":"623a7233be2183030a435f41c39e149a5619a6a5b5e0d4d9c01f821d7129083c","/index.html":"5c59d11627b3a992f06672d22f52b0bcae342b9dea528be2cb443a7f50c4f357","/firestore.rules":"fdc6997b2595c25246799adfd9278ac5f274f0b22bf6f89c4d698dc745c00468","/firebase.js":"6c2ff860218bd6e8f0bcca8d374c2e125f09fedaee01a13033fa082c8ac60062","/config.js":"f5c2040cff695c4d4756a62915ac71b3895ae064371921d0317e4a657ef165d2","/public/projects.html":"83cc426d3756fa77c4740c2e35d355d56386fc6292e8f8610c3fc51a8a9f1ffd","/public/config.js":"ea99b96c4546386b5ef7dd4dc53cd58c72eaecfff4deba4903d8ac0143915d5c","/public/styles/styles.css":"af02969543667b50718e9e231cb9f8d62c3718c02efcfd8b21c8b1f98f9b716c"}}
+[debug] [2025-10-29T18:44:06.947Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c:populateFiles 200
+[debug] [2025-10-29T18:44:06.947Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/port-28889158-e2929/versions/abd02c7faa61340c/files"}
+[debug] [2025-10-29T18:44:06.948Z] [hosting][populate queue][FINAL] {"max":548,"min":548,"avg":548,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":548}
+[debug] [2025-10-29T18:44:06.949Z] [hosting] uploads queued: 0
+[debug] [2025-10-29T18:44:06.950Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1761763446950}
+[info] i  hosting: upload complete 
+[info] +  hosting[port-28889158-e2929]: file upload complete 
+[debug] [2025-10-29T18:44:06.951Z] [hosting] deploy completed after 594ms
+[debug] [2025-10-29T18:44:06.952Z] [
+  {
+    "config": {
+      "public": "portf",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "port-28889158-e2929"
+    },
+    "version": "projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c"
+  }
+]
+[info] i  hosting[port-28889158-e2929]: finalizing version... 
+[debug] [2025-10-29T18:44:06.955Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:06.956Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:06.957Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions/abd02c7faa61340c updateMask=status%2Cconfig
+[debug] [2025-10-29T18:44:06.957Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions/abd02c7faa61340c {"status":"FINALIZED","config":{}}
+[debug] [2025-10-29T18:44:07.107Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions/abd02c7faa61340c 200
+[debug] [2025-10-29T18:44:07.108Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/versions/abd02c7faa61340c {"name":"projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-10-29T18:44:06.773576Z","createUser":{"email":"yas23001@byui.edu"},"finalizeTime":"2025-10-29T18:44:07.683676Z","finalizeUser":{"email":"yas23001@byui.edu"}}
+[debug] [2025-10-29T18:44:07.108Z] [hosting] finalized version for port-28889158-e2929:[object Object]
+[info] +  hosting[port-28889158-e2929]: version finalized 
+[info] i  hosting[port-28889158-e2929]: releasing new version... 
+[debug] [2025-10-29T18:44:07.110Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:07.111Z] Checked if tokens are valid: true, expires at: 1761766974336
+[debug] [2025-10-29T18:44:07.111Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/channels/live/releases versionName=projects%2F985506470467%2Fsites%2Fport-28889158-e2929%2Fversions%2Fabd02c7faa61340c
+[debug] [2025-10-29T18:44:07.112Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/channels/live/releases {}
+[debug] [2025-10-29T18:44:07.305Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/channels/live/releases 200
+[debug] [2025-10-29T18:44:07.305Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/port-28889158-e2929/channels/live/releases {"name":"projects/985506470467/sites/port-28889158-e2929/channels/live/releases/1761763447337000","version":{"name":"projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-10-29T18:44:06.773576Z","createUser":{"email":"yas23001@byui.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJD7xyEnENzVcUT7oJko6HBxhCwPWshh5gZ53NfooLJYixbQcw"},"finalizeTime":"2025-10-29T18:44:07.683676Z","finalizeUser":{"email":"yas23001@byui.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJD7xyEnENzVcUT7oJko6HBxhCwPWshh5gZ53NfooLJYixbQcw"}},"type":"DEPLOY","releaseTime":"2025-10-29T18:44:07.337Z","releaseUser":{"email":"yas23001@byui.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJD7xyEnENzVcUT7oJko6HBxhCwPWshh5gZ53NfooLJYixbQcw"}}
+[debug] [2025-10-29T18:44:07.306Z] [hosting] release: {"name":"projects/985506470467/sites/port-28889158-e2929/channels/live/releases/1761763447337000","version":{"name":"projects/985506470467/sites/port-28889158-e2929/versions/abd02c7faa61340c","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-10-29T18:44:06.773576Z","createUser":{"email":"yas23001@byui.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJD7xyEnENzVcUT7oJko6HBxhCwPWshh5gZ53NfooLJYixbQcw"},"finalizeTime":"2025-10-29T18:44:07.683676Z","finalizeUser":{"email":"yas23001@byui.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJD7xyEnENzVcUT7oJko6HBxhCwPWshh5gZ53NfooLJYixbQcw"}},"type":"DEPLOY","releaseTime":"2025-10-29T18:44:07.337Z","releaseUser":{"email":"yas23001@byui.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJD7xyEnENzVcUT7oJko6HBxhCwPWshh5gZ53NfooLJYixbQcw"}}
+[info] +  hosting[port-28889158-e2929]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/port-28889158-e2929/overview
+[info] Hosting URL: https://port-28889158-e2929.web.app
