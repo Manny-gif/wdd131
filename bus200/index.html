@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Your Event - Cause a Scene</title>
+    <title>Cause a Scene - Photobooth</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -12,7 +12,7 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f8f9fa; /* Cool, light grey background */
             color: #343a40;
         }
 
@@ -24,22 +24,39 @@
 
         /* Header Styles */
         header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            background-color: #BEBEBE;
             padding: 10px 0;
-            position: sticky;
+            position: absolute;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
 
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: none;
+            margin: 0 20px;
+            padding: 0;
+        }
+
+        /* Logo Styles */
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         .logo img {
-            height: 60px;
+            max-width: 100%;
+            max-height: 100%;
         }
 
         .header-right {
@@ -55,7 +72,7 @@
 
         nav li {
             display: inline-block;
-            margin: 0 20px;
+            margin: 0;
         }
 
         nav a {
@@ -64,35 +81,37 @@
             font-weight: 700;
             font-size: 0.9em;
             transition: color 0.3s ease;
+            padding: 0 20px;
         }
 
         nav a:hover {
-            color: #007bff;
+            color: #007bff; /* A vibrant blue for hover */
         }
 
+        /* Button Styles */
         .button {
-            text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-weight: 700;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-block;
+            text-decoration: none; /* Removes the default underline from the link */
+            color: #fff; /* Sets the text color to white */
+            background-color: #007bff; /* Sets the background color to a vibrant blue */
+            padding: 12px 24px; /* Adds space inside the button (top/bottom, left/right) */
+            border-radius: 25px; /* Creates the rounded corners for a pill shape */
+            font-weight: 700; /* Makes the button text bold */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smoothly animates color and position changes */
+            display: inline-block; /* Allows the button to have a set width and height while flowing with text */
         }
 
         .button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+            background-color: #0056b3; /* Darkens the button color when hovered over */
+            transform: translateY(-2px); /* Lifts the button slightly on hover for a 3D effect */
         }
 
+        /* Social Media Icons */
         .social-media {
             margin-left: 20px;
         }
-
         .social-media a {
             color: #343a40;
-            margin: 0 8px;
+            margin: 0 5px;
             font-size: 1.2em;
             transition: color 0.3s ease;
         }
@@ -101,66 +120,88 @@
             color: #007bff;
         }
 
-        /* Booking Section */
-        .booking-section {
-            padding: 80px 20px;
+        /* Hero Section Styles */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('ksenia-bondarchuk-QarJj_rzNvc-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
             text-align: center;
+            padding: 120px 20px;
         }
 
-        .booking-section h1 {
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
+            font-size: 3.5em;
             font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2em;
             margin-bottom: 40px;
         }
 
-        .booking-form {
-            max-width: 600px;
-            margin: 0 auto;
+        /* Intro Section */
+        .intro {
+            padding: 80px 20px;
+            text-align: center;
             background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            text-align: left;
         }
 
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .intro ul {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
             font-size: 1.1em;
+            text-align: left;
+            list-style-position: inside;
         }
 
-        .form-group input, .form-group select {
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item img {
             width: 100%;
-            padding: 12px;
-            border-radius: 5px;
-            border: 1px solid #ced4da;
-            font-size: 1em;
-            font-family: 'Lato', sans-serif;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .submit-button {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2em;
-            font-weight: 700;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .submit-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+        .gallery-item img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
 
         /* Footer Styles */
@@ -168,7 +209,6 @@
             background-color: #343a40;
             color: #f8f9fa;
             padding: 20px 0;
-            margin-top: 60px;
         }
 
         footer .container {
@@ -184,69 +224,95 @@
         footer .social-media a:hover {
             color: #007bff;
         }
+
+        /* Animation Styles */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="/FullLogo_NoBuffer.png" alt="Cause a Scene Logo">
+                <img src="FullLogo_NoBuffer.png" alt="Cause a Scene Logo">
             </div>
             <div class="header-right">
                 <nav>
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="booking.html">BOOK NOW</a></li>
                     </ul>
                 </nav>
-                <a href="booking.html" class="button book-now-header">BOOK NOW</a>
                 <div class="social-media">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="booking-section">
-            <h1>Book Your Photo Booth Experience</h1>
-            <div class="booking-form">
-                <form id="event-booking-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Cause a Scene Photobooth</h1>
+                <p>Create unforgettable memories with a sleek, modern photo booth for your special event.</p>
+                <a href="booking.html" class="button book-now-main">BOOK YOUR EVENT</a>
+            </div>
+        </section>
+
+        <section class="intro fade-in-section">
+            <div class="container">
+                <h2>Welcome to Cause a Scene</h2>
+                <ul>
+                    <li>We offer a stand-alone, easy to use, fun and creative photo booth</li>
+                    <li>Can be set up indoors or outdoors</li>
+                    <li>We customize our back drops and screens to coordinate with your event</li>
+                    <li>Your guests receive their digital photos instantly through text, email or airdrop</li>
+                    <li>A live gallery with all the photos from your event, providing you with many more photo memories of your guests</li>
+                    <li>Find us throughout Southeast Idaho and and Northern Utah region</li>
+                    <li>Give the gift of photos at your next wedding, reunion, baby/bridal shower, or any other event. Cause A Scene that you and your guests will always remember!</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <h2 class="fade-in-section">Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="andrea-riondino-fIsq8v-mML8-unsplash.jpg" alt="Photo booth fun">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="gallery-item">
+                        <img src="brittani-burns-y-Fo-Ro2EHQ-unsplash.jpg" alt="Photobooth props">
                     </div>
-                    <div class="form-group">
-                        <label for="event-date">Date of Event</label>
-                        <input type="date" id="event-date" name="event-date" required>
+                    <div class="gallery-item">
+                        <img src="garvit-nama-tsZZZe7io1s-unsplash.jpg" alt="Friends posing for a photo">
                     </div>
-                    <div class="form-group">
-                        <label for="event-type">Type of Event</label>
-                        <select id="event-type" name="event-type">
-                            <option value="wedding">Wedding</option>
-                            <option value="corporate">Corporate Event</option>
-                            <option value="birthday">Birthday Party</option>
-                            <option value="other">Other</option>
-                        </select>
+                     <div class="gallery-item">
+                        <img src="happy-films-LymVMRIUwPQ-unsplash.jpg" alt="Party atmosphere">
                     </div>
-                    <button type="submit" class="submit-button">Request a Quote</button>
-                </form>
+                    <div class="gallery-item">
+                        <img src="thibault-copleux-If--8LCaLPs-unsplash.jpg" alt="Group of friends having fun">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Cause a Scene Photobooth. All Rights Reserved.</p>
+            <p>Prototype webpage for Bus200</p>
             <div class="social-media">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
